@@ -1,0 +1,109 @@
+.Kitchen-Menu {
+  background: #fff;
+  padding: 0 calc((75 / 1440) * 100%) 0 calc((100 / 1440) * 100%);
+}
+.Kitchen-Menu-Navbar {
+  height: 82.63px;
+  background-color: #f6f7f8;
+  opacity: 0.5;
+}
+.Kitchen-Menu-Navbar .nav-link {
+  text-align: center;
+  font-family: ABeeZee;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Kitchen-Menu-Navbar .nav-item:first-child .nav-link {
+  color: #1ac073;
+}
+.Kitchen-Menu-Navbar .span.nav-link {
+  color: #c1c8ce;
+}
+.Kitchen-Menu-Navbar .nav-item:last-child .nav-link {
+  color: #262626;
+}
+.Kitchen-Menu-Banner {
+  margin-top: 50px;
+  margin-bottom: 130px;
+  height: 270px;
+  background-image: url("/images/noodle1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.Kitchen-Menu-Banner .Content {
+  position: absolute;
+  top: 50px;
+  left: calc((75 / 1440) * 100%);
+}
+.Kitchen-Menu-Banner .Content p:first-child {
+  color: #000;
+  font-family: ABeeZee;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Kitchen-Menu-Banner .Content p:last-child {
+  color: #000;
+  font-family: ABeeZee;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.Kitchen-Menu-Content .Side-bar {
+    padding: 0;
+}
+.slider-box {
+  background-color: #f6f7f8;
+  padding: 20px;
+}
+.price-span {
+  color: #22262a;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.price-div {
+  font-family: "Lexend Deca";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.ranger-label {
+  color: #262626;
+  margin-right: 39.5px;
+}
+.price-label {
+  color: #22262a;
+}
+.Kitchen-Menu-Content .Side-bar .Rating {
+  background-color: #f6f7f8;
+  padding: 20px;
+}
+.Kitchen-Menu-Content .Side-bar .Rating p {
+  color: #22262a;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 28px;
+}
+.Rating .star-solid {
+  color: #ffcb45;
+}
+.Rating .star-empty {
+  color: #f2f2f2;
+}
+
+.Pagination li {
+  list-style: none;
+}

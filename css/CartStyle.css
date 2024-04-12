@@ -1,0 +1,359 @@
+.Kitchen-Cart {
+  display: flex;
+  padding: 105px calc((130 / 1440) * 100%) 118px calc((130 / 1440) * 100%);
+  flex-direction: column;
+  align-items: center;
+}
+
+.Kitchen-Cart-Navbar {
+  height: 82.63px;
+  fill: #f6f7f8;
+  opacity: 0.5;
+}
+
+.Kitchen-Cart-Navbar .nav-link {
+  color: #1ac073;
+  text-align: center;
+  font-family: ABeeZee;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Kitchen-Cart-Navbar span.nav-link {
+  color: #c1c8ce;
+}
+
+.Kitchen-Cart-Navbar .nav-item:last-child .nav-link {
+  color: #262626;
+}
+
+.Kitchen-Cart-Product {
+  margin-top: 105.37px;
+  margin-bottom: 117px;
+  overflow: auto;
+}
+
+#product-cart-table thead th {
+  color: #22262a;
+  font-family: Lexend Deca;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  vertical-align: top;
+}
+
+#product-cart-table thead th:first-child {
+  padding-left: calc((48 / 1440) * 100%);
+}
+
+#product-cart-table tbody tr td:first-child {
+  padding-left: calc((48 / 1440) * 100%);
+}
+
+#product-cart-table tbody tr {
+  margin: 40px 0;
+}
+
+#product-cart-table tbody tr td:first-child span:first-of-type {
+  color: #262626;
+  font-family: Lexend Deca;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#product-cart-table tbody tr td:first-child span:nth-of-type(2) {
+  color: #929292;
+  font-family: Lexend Deca;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  margin-top: -50px;
+}
+
+#product-cart-table tbody tr td:nth-child(2) {
+  color: #262626;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#product-cart-table tbody tr td:nth-child(3) span {
+  color: #262626;
+  font-family: Lexend Deca;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#product-cart-table tbody tr td:nth-child(3) a {
+  color: #f20505;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  padding-left: 20px;
+}
+
+#product-cart-table tbody tr td:last-child {
+  color: #262626;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Kitchen-Cart-Payment-left {
+  padding: 0;
+}
+
+#search-voucher {
+  display: flex;
+  align-items: center;
+  width: 369.908px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+#search-voucher input {
+  color: #262626;
+  font-family: Lexend Deca;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+#search-voucher button {
+  background-color: #1ac073;
+  color: #fff;
+  font-family: Lexend Deca;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 0 0.25rem 0.25rem 0;
+  height: 38px;
+}
+
+.Kitchen-Cart-Payment-right {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.total-check-out {
+  width: 378.032px;
+  height: 414px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: #262626;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.total-check-out .row {
+  justify-content: space-between;
+}
+
+.total-check-out .total {
+  color: #22262a;
+  font-family: Lexend Deca;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#btn-check-out {
+  border-radius: 10px;
+  background: #1ac073;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  font-family: Lexend Deca;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.modal-title {
+  color: #1ac073;
+  font-family: ABeeZee;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.modal-header button span {
+  color: #1ac073;
+  opacity: 0.5;
+}
+
+#make-payment-modal .modal-body input.form-control {
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  opacity: 0.7;
+  background: var(--gray-light, #dfdede);
+  color: var(--gray, #999);
+  font-family: Lexend Deca;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+#input-address-payment {
+  padding-top: 27px;
+  height: 122.525px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  opacity: 0.7;
+  background: var(--gray-light, #dfdede);
+  color: var(--gray, #999);
+  font-family: Lexend Deca;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.make-payment-modal-body-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.make-payment-modal-body-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.make-payment-modal-body-left label {
+  color: #1ac073;
+  font-family: Lexend Deca;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+#select-method-payment > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#select-method-payment > div div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-footer button {
+  width: 338px;
+  height: 70px;
+  border-radius: 10px;
+  background: #1ac073;
+  color: var(--white, #fff);
+  text-align: center;
+  font-family: Lexend Deca;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  color: #1ac073;
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 126.5%;
+}
+
+#make-payment-modal-success .modal-body div:nth-of-type(3) {
+  color: #223263;
+  text-align: center;
+  font-family: Lexend Deca;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+}
+
+/* xử lý responsive */
+@media screen and (max-width: 991px) {
+  .Kitchen-Cart {
+    padding: 0;
+  }
+
+  #product-cart-table thead th {
+    font-size: 18px;
+  }
+  
+  #product-cart-table tbody tr td:first-child span:first-of-type {
+    font-size: 14px;
+  }
+  
+  #product-cart-table tbody tr td:first-child span:nth-of-type(2) {
+    font-size: 10px;
+    margin-top: 0;
+  }
+  
+  #product-cart-table tbody tr td:nth-child(2) {
+    font-size: 14px;
+  }
+  
+  #product-cart-table tbody tr td:nth-child(3) span {
+    font-size: 14px;
+  }
+  
+  #product-cart-table tbody tr td:nth-child(3) a {
+    font-size: 12px;
+  }
+  
+  #product-cart-table tbody tr td:last-child {
+    font-size: 14px;
+  }
+
+  #search-voucher {
+    margin: auto;
+    margin-bottom: 100px;
+  }
+  .total-check-out {
+    margin: auto;
+    width: 100%;
+  }
+}

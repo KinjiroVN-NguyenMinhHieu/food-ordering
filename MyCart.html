@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Ordering Cart</title>
+    <!-- Nhúng Bootstrap và Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <!-- Nhúng external JS and CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/CartStyle.css" />
+    <script src="js/script.js"></script>
+    <script src="js/CartScript.js"></script>
+    <!-- Nhúng DataTable -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap4.min.css"
+    />
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Nhúng font awesome 5 -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Nhúng font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Lexend+Deca&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="Header container-fluid" id="About">
+      <nav class="navbar navbar-expand-lg navbar-dark header-menu fixed-top">
+        <a class="navbar-brand header-brand">WHAT2EAT</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedHeaderContent"
+          aria-controls="navbarSupportedHeaderContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedHeaderContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Menu-cart">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">Contact</a>
+            </li>
+          </ul>
+          <form
+            class="form-inline my-lg-0"
+            action="/search/"
+            id="custom-search-form"
+          >
+            <img
+              src="images/akar-icons_search.png"
+              alt="search"
+              class="btn"
+              id="custom-icon-search-navbar"
+            />
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              id="custom-input-search-navbar"
+            />
+            <img
+              id="custom-icon-shopping-bag"
+              class="btn"
+              src="images/akar-icons_shopping-bag-empty.png"
+              alt="shopping-bag"
+            />
+          </form>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 header-content-left">
+          <div class="Hero-display">
+            <div class="display-text">
+              <div class="display-text-title text-sm">
+                Authentic Home<br />food in UK
+              </div>
+              <div class="display-text-description">
+                What2Eat is a courier service in which authentic home cook<br />food
+                is delivered to a customer.
+              </div>
+            </div>
+            <form class="search-input">
+              <input
+                type="text"
+                placeholder="Search food you love"
+                class="form-control"
+              />
+              <button class="btn">Search</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-6 header-content-right">
+          <img
+            src="images/cooking.man.header.png"
+            alt="cooking-man"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="Kitchen-Cart container-fluid" id="Menu-cart">
+      <nav class="navbar navbar-expand p-0 Kitchen-Cart-Navbar">
+        <div class="collapse navbar-collapse" id="navbarKitchenCart">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li>
+              <span class="nav-link">/</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Menu-cart">Trending</a>
+            </li>
+            <li>
+              <span class="nav-link">/</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Menu-cart">Famous Tandoor</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="Kitchen-Cart-Product w-100">
+        <table id="product-cart-table" class="table w-100">
+          <thead>
+            <tr>
+              <th>PRODUCT</th>
+              <th>PRICE</th>
+              <th>QTY</th>
+              <th>UNIT<br />PRICE</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="row Kitchen-Cart-Payment w-100">
+        <div class="Kitchen-Cart-Payment-left col-12 col-lg-6">
+          <div id="search-voucher">
+            <input
+              type="text"
+              placeholder="Voucher code"
+              class="form-control"
+              id="input-voucher-code"
+            />
+            <button class="btn" id="btn-radeem-voucher">Redeem</button>
+          </div>
+        </div>
+
+        <div class="Kitchen-Cart-Payment-right col-12 col-lg-6">
+          <div class="total-check-out">
+            <div class="row subtotal">
+              <div>Subtotal</div>
+              <div>$<span>0</span></div>
+            </div>
+            <div class="row shipping-fee">
+              <div>Shipping fee</div>
+              <div>$<span>20</span></div>
+            </div>
+            <div class="row coupon">
+              <div>Coupon</div>
+              <span>No</span>
+            </div>
+            <div class="divider"></div>
+            <div class="row total">
+              <div>TOTAL</div>
+              <div>$<span>0</span></div>
+            </div>
+            <button class="btn" id="btn-check-out">Check out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Footer container-fluid p-0">
+      <div class="Footer-content">
+        <div class="Footer-menu">
+          <nav class="navbar navbar-expand-lg navbar-dark header-menu">
+            <a class="navbar-brand header-brand">WHAT2EAT</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedFooterContent"
+              aria-controls="navbarSupportedFooterContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse"
+              id="navbarSupportedFooterContent"
+            >
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#About">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Menu-cart">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Contact">Contact</a>
+                </li>
+              </ul>
+              <div class="Social-icon">
+                <a
+                  class="Social-icon-fb btn"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
+                  <img src="images/Social_icon_fb.png" alt="facebook" />
+                </a>
+                <a
+                  class="Social-icon-insta btn"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                >
+                  <img src="images/Social_icon_insta.png" alt="instagram" />
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="Copy-right">
+          <div class="White-line w-100"></div>
+          <div class="Copy-right-content">Copyright @2021 What2Eat</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phần Modal thanh toán -->
+    <!-- Modal xác nhận thanh toán -->
+    <div
+      class="modal fade"
+      id="make-payment-modal"
+      tabindex="-1"
+      aria-labelledby="make-payment-modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header pl-5">
+            <h5 class="modal-title mx-auto" id="make-payment-modal-title">
+              Make Payment
+            </h5>
+            <button
+              type="button"
+              class="close ml-0"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="d-flex justify-content-center pr-5">
+                <img src="images/Stepper1.png" />
+              </div>
+              <div class="row">
+                <div
+                  class="make-payment-modal-body-left col-12 col-md-6 form-group"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input-firstname-payment"
+                    placeholder="First Name"
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input-email-payment"
+                    placeholder="Email Address"
+                  />
+                  <label for="select-method-payment"
+                    >Select Method of Payment</label
+                  >
+                  <div id="select-method-payment">
+                    <div class="row">
+                      <div>
+                        <img src="images/Credit Card.png" />
+                        <span>Credit Card Or Debit</span>
+                      </div>
+                      <input
+                        class="checkbox"
+                        type="checkbox"
+                        id="credit-card-check-box"
+                        name="payment-check-box"
+                        value="CreditCard"
+                      />
+                    </div>
+                    <div class="row">
+                      <div>
+                        <img src="images/Paypal.png" />
+                        <span>Paypal</span>
+                      </div>
+                      <input
+                        class="checkbox"
+                        type="checkbox"
+                        id="paypal-check-box"
+                        name="payment-check-box"
+                        value="Paypal"
+                      />
+                    </div>
+                    <div class="row">
+                      <div>
+                        <img src="images/Bank.png" />
+                        <span>Bank</span>
+                      </div>
+                      <input
+                        class="checkbox"
+                        type="checkbox"
+                        id="bank-check-box"
+                        name="payment-check-box"
+                        value="BankTransfer"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="make-payment-modal-body-right col-12 col-md-6 form-group"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input-lastname-payment"
+                    placeholder="Last Name"
+                  />
+                  <textarea
+                    class="form-control"
+                    id="input-address-payment"
+                    placeholder="Address for Delivery"
+                  ></textarea>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="input-phone-payment"
+                    placeholder="Mobile Phone"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn mx-auto" id="btn-payment">
+              Go to Payment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal thanh toán thành công -->
+    <div
+      class="modal fade"
+      id="make-payment-modal-success"
+      tabindex="-1"
+      aria-labelledby="make-payment-modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header pl-5">
+            <h5 class="modal-title mx-auto" id="make-payment-modal-title">
+              Make Payment
+            </h5>
+            <button
+              type="button"
+              class="close ml-0"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-center pr-5">
+              <img src="images/Stepper2.png" />
+            </div>
+            <div class="d-flex justify-content-center pr-1">
+              <img src="images/Success Icon.png" />
+            </div>
+            <div class="text-center">Success</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn mx-auto" id="btn-complete-payment">
+              Complete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
